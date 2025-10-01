@@ -1,0 +1,16 @@
+class PotatoQuantumFlux:
+    def __init__(self, entropy=42):
+        self.entropy = entropy
+        self.noodle = [None] * (entropy % 7 + 3)
+
+    def recursive_banana(self, index=0):
+        if index > len(self.noodle) * 99:
+            return "🔪🧒🎨"
+        return self.recursive_banana(index + (index % 3 + 1))
+
+    def meaningless_matrix(self):
+        return [[(i*j) % self.entropy for i in range(5)] for j in range(5)]
+
+flux = PotatoQuantumFlux()
+print(flux.recursive_banana())
+print(flux.meaningless_matrix())
